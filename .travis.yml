@@ -11,12 +11,12 @@ script:
   - docker run -e CI=true judrin/docker-react npm run test
 
 after_success:
-  - docker build -t judrin/React-Frontend ./Frontend-React
+  - docker build -t judrin/react-frontend ./Frontend-React
 
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push judrin/React-Frontend
+  - docker push judrin/react-frontend
 
 
 
@@ -24,11 +24,11 @@ after_success:
 
 deploy:
   provider: elasticbeanstalk
-  region: 'us-east-1'
-  app: 'Front-End-React'
-  env: 'Frontendreact-env'
-  bucket_name: 'elasticbeanstalk-us-east-1-682967080831'
-  bucket_path: 'docker-react'
+  region: "us-east-1"
+  app: "Front-End-React"
+  env: "Frontendreact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-682967080831"
+  bucket_path: "docker-react"
   on:
     branch: master
 
