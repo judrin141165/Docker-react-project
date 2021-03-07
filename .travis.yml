@@ -5,17 +5,33 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/docker-react -f Dockerfile.dev .
+  - docker build -t judrin/docker-react -f ./React-Frontend/Frontend-React/Dockerfile.dev .
 
 script:
-  - docker run -e CI=true stephengrider/docker-react npm run test
+  - docker run -e CI=true judrin/docker-react npm run test
+
+after_success:
+  - docker build -t judrin/React-Frontend ./React-Frontend
+
+  # Log in to the docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push judrin/React-Frontend
+
+
+
+
 
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-1'
-  app: 'docker'
-  env: 'docker-env'
-  bucket_name: 'elasticbeanstalk-us-east-1-923445559289'
-  bucket_path: 'docker'
+  app: 'Front-End-React'
+  env: 'Frontendreact-env'
+  bucket_name: 'elasticbeanstalk-us-east-1-682967080831'
+  bucket_path: 'docker-react'
   on:
     branch: master
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
