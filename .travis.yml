@@ -11,12 +11,12 @@ script:
   - docker run -e CI=true judrin/react-project npm run test
 
 # after_success:
- - docker build -t judrin/react-frontend ./
+  - docker build -t judrin/react-frontend ./
 
 # Log in to the docker CLI
- - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Take those images and push them to docker hub
- - docker push judrin/react-frontend
+  - docker push judrin/react-frontend
 
 
 
@@ -34,4 +34,5 @@ deploy:
 
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
+
 
