@@ -24,7 +24,7 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1"
+  region: "us-west-1"
   app: "Front-End-React"
   env: "Frontendreact-env"
   bucket_name: "elasticbeanstalk-us-east-1-682967080831"
