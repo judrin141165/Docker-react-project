@@ -5,18 +5,18 @@ services:
   - docker
 
 before_install:
-  - docker build -t judrin/react-project  -f Dockerfile.dev .
+  - docker build -t judrin/Docker-react-project  -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true judrin/react-project npm run test
+  - docker run -e CI=true judrin/Docker-react-project npm run test
 
 # after_success:
-  - docker build -t judrin/react-frontend ./
+  - docker build -t judrin/react-Docker-react-project ./
 
 # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Take those images and push them to docker hub
-  - docker push judrin/react-frontend
+  - docker push judrin/react-Docker-react-project
 
 
 
