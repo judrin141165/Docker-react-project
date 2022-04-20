@@ -132,7 +132,7 @@
       <workItem from="1648801615405" duration="2597000" />
       <workItem from="1649151052648" duration="1847000" />
       <workItem from="1650049375489" duration="7962000" />
-      <workItem from="1650456278427" duration="1544000" />
+      <workItem from="1650456278427" duration="3084000" />
     </task>
     <task id="LOCAL-00001" summary="jenkins file committ">
       <created>1626480386061</created>
@@ -169,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650457804073</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Travis update">
+      <created>1650457860390</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650457860390</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +197,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="jenkins file committ" />
     <MESSAGE value="Travis update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Travis update" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/judrin141165/docker-react-project&#10;&#10; Conflicts:&#10;&#9;.idea/Docker-react-project.iml&#10;&#9;.idea/aws.xml&#10;&#9;.idea/sshConfigs.xml&#10;&#9;Dockerfile&#10;&#9;jenkinsfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/judrin141165/docker-react-project&#10;&#10; Conflicts:&#10;&#9;.idea/Docker-react-project.iml&#10;&#9;.idea/aws.xml&#10;&#9;.idea/sshConfigs.xml&#10;&#9;Dockerfile&#10;&#9;jenkinsfile" />
   </component>
 </project>
